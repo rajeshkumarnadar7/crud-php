@@ -5,6 +5,9 @@ if(!array_key_exists('id', $_SESSION))
 {
 	header("Location: index.php?msg=Opps Sorry :(");
 }
+else
+{
+}
 error_reporting(E_ALL);
 $id=$_GET['id'];
 $query="select * from students_details where id=".$id;
