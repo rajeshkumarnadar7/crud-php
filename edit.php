@@ -106,6 +106,86 @@ $fetch_data=mysqli_fetch_assoc($query_execute);
 		</tr>
 	</form>
 </body>
+ <script>
+
+$(function() {
+  
+  $("form[name='insert']").validate({
+    
+    rules: {
+      
+      name: {
+        required: true,
+        lettersonly: true,
+        maxlength: 30,
+        minlength: 5
+        
+      },
+      roll_no: {
+        required: true,
+        number: true,
+        maxlength: 11,
+        minlength: 3
+        
+      },
+      address: {
+        required: true,
+        maxlength: 255,
+        minlength: 10
+        
+      },
+      date: {
+        required: true,
+        date: true
+      },
+      email: {
+        required: true,
+        email: true
+      },
+      mobile: {
+        required: true,
+        number: true,
+        maxlength: 10,
+        minlength: 10
+        
+      }
+    },
+   
+     messages: {
+      name: {
+      	 required: "Please provide Your Name",
+        maxlength: "Please Enter Less Then 30 Character",
+        minlength: "Please Enter More Then 3 Character",
+        lettersonly: "Please Enter Alphabet"
+  		},
+  		address: {
+      	 required: "Please provide Your Address",
+        maxlength: "Please Enter Less Then 255 Character",
+        minlength: "Please Enter More Then 10 Character",
+        number: "Please Enter Alphabet"
+  		},
+      date: "Pleae Select the DOB",
+      roll_no: {
+      	required: "Please provide Your Roll Number",
+        maxlength: "Please Enter Less Then 11 Character",
+        minlength: "Please Enter More Then 3 Character",
+        number: "Please Enter Number"
+  		},
+      mobile: {
+        required: "Please provide a mobile",
+        maxlength: "Please Enter Your 10 Digit Mobile Number",
+        minlength: "Please Enter Your 10 Digit Mobile Number",
+        number: "Please Enter Number"
+      },
+      email: "Please enter a valid email address"
+    },
+    
+    submitHandler: function(form) {
+      form.submit();
+    }
+  });
+});
+</script>
 
 
 </html>

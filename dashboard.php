@@ -191,7 +191,7 @@ $query_execute=mysqli_query($conn,$query);
  </div>	
 
 </body>	
- <scripts>
+ <script>
 
 $(function() {
   
