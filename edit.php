@@ -5,14 +5,17 @@ if(!array_key_exists('id', $_SESSION))
 {
 	header("Location: index.php?msg=Opps Sorry :(");
 }
-
-
-
-
+if(!array_key_exists('id',$_GET))
+{
+	 header("Location: index.php?msg=Id not found");
+}
+else
+{
 $id=$_GET['id'];
 $query="select * from students_details where id=".$id;
 $query_execute=mysqli_query($conn,$query);
 $fetch_data=mysqli_fetch_assoc($query_execute);
+}
 ?>
 <html>
 
