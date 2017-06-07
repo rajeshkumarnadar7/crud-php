@@ -7,7 +7,7 @@ if(!array_key_exists('id', $_SESSION))
 }
 if(!array_key_exists('id',$_GET))
 {
-	 header("Location: index.php?msg=Id not found");
+	 header("Location: dashboard.php?msg=Id not found");
 }
 else
 {

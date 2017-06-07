@@ -130,7 +130,7 @@ $query_execute=mysqli_query($conn,$query);
 		</tr>
 		<tr>
 			<td width="300px" align="right">Email</td>
-			<td width="400px" align="center"><input type="email" name="email" id="email" ></td>
+			<td width="400px" align="center"><input type="type" name="email" id="email" ></td>
 			<td><font size="3" color="red"><span><h4 id="email_response" name="email_response">	
 				<?php if (array_key_exists('error', $_GET)) {
 					echo $_GET['error'];
@@ -147,8 +147,16 @@ $query_execute=mysqli_query($conn,$query);
 
 		</tr>	
 		<tr>
-			<td width="300px" align="right"><input type="submit" id="login" name="login" value="Login"></td>
+			<td width="300px" align="right"><input type="submit" id="login" name="login" value="Insert"></td>
 			<td width="300px" align="center"><input type="reset" id="clear" name="clear" value="clear"></td>
+			
+		</tr>
+		<tr align="center">
+			<td  align="center"><font size="3" color="red">	
+				<?php if (array_key_exists('msg', $_GET)) {
+					echo $_GET['msg'];
+				} ?>
+			</font></td>
 		</tr>
 	</form>
 

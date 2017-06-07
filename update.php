@@ -38,19 +38,18 @@ if (empty($_POST["address"])) {
 		$addresserr = "Address is required";
 		} else {
 				$address=$_POST['address'];
-				if (!preg_match("/^[a-z0-9!@#$%^&*()_-+|;:<>,.?]*$/",$address)) {
-				$addresserr = "Invalid Address";
-}
-}
+				}
 
 if (empty($_POST["date"])) {
 		$doberr = "DOB is required";
 		} else {
-				$dob=$_POST['date'];
-				if (!preg_match("/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/",$date)) {
-				$doberr = "Invalid DOB";
-}
-}
+					$dob=$_POST['date'];
+					if (!preg_match("/^[0-9]{4}-[0-1][0-9]-[0-3][0-9]*$/",$dob))
+	    			{
+	      			 $doberr = "Invalid DOB";
+					}
+    			}
+				 
 
 if(!empty($nameErr) || !empty($rollnoerr) || !empty($moberr) ||  !empty($addresserr) ||  !empty($doberr) )
 {

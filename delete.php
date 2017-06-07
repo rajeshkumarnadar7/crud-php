@@ -3,7 +3,7 @@ require_once("conn.php");
 session_start();
 if(!array_key_exists('id', $_SESSION))
 {
-	header("Location: index.php?msg=Opps Sorry :(");
+	header("Location: dasboard.php?msg=Opps Sorry :(");
 }
 if(!array_key_exists('id',$_GET))
 {
